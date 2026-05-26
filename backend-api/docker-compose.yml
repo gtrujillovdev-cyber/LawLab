@@ -1,0 +1,34 @@
+version: '3.9'
+
+services:
+  chromadb:
+    image: chromadb/chroma:latest
+    container_name: lawlab_chromadb
+    ports:
+      - "8001:8000"
+
+    environment:
+      - IS_PERSISTENT=TRUE
+      - PERSIST_DIRECTORY=/chroma/chroma
+      - ANONYMIZED_TELEMETRY=FALSE
+    volumes:
+      - chroma_data:/chroma/chroma
+    restart: always
+
+volumes:
+  chroma_data:
+    driver: local
+
+  fastapi:
+    build: .
+    container_name: lawlab_fastapi
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - CHROMA_HOST=chromadb
+      - CHROMA_PORT=8000
+    depends_on:
+      - chromadb
+    restart: always

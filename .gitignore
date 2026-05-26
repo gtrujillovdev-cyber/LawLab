@@ -1,0 +1,38 @@
+# Mac OS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+
+# Docker / ChromaDB
+chroma_db/
+backend-api/chroma_db/
+
+# Xcode / Swift
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xccheckout
+*.moved-aside
+DerivedData/
+*.hmap
+*.ipa
+*.xcuserstate
+LawLab-macOS/.build/
+LawLab-macOS/DerivedData/
+
+# Logs
+*.log
+backend-api/logs/

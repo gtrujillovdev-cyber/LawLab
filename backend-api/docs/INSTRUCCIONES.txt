@@ -1,0 +1,2 @@
+Coloca aquí los archivos PDF de legislación laboral española (ej. Estatuto de los Trabajadores.pdf).
+Luego ejecuta: python ingest.py para fragmentar, vectorizar e indexar en ChromaDB.
