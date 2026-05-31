@@ -1,4 +1,5 @@
 import Foundation
+import Combine
 
 /// Enumeración de errores de red personalizados para un diagnóstico preciso.
 enum NetworkError: Error, LocalizedError {
@@ -25,7 +26,7 @@ enum NetworkError: Error, LocalizedError {
 }
 
 /// Cliente de red para consumir la API de LawLab de forma concurrente.
-class NetworkManager {
+class NetworkManager: ObservableObject {
     static let shared = NetworkManager()
     
     private var baseURL: String {

@@ -528,7 +528,7 @@ struct ContentView: View {
         .frame(minWidth: 700, minHeight: 480)
         .sheet(isPresented: $showPipeline) {
             PipelineView()
-                .environmentObject(viewModel.networkManager)
+                .environmentObject(NetworkManager.shared)
                 .frame(minWidth: 800, minHeight: 600)
         }
         .sheet(isPresented: $showSettings) {

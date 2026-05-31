@@ -43,7 +43,7 @@ struct PipelineView: View {
                         .foregroundColor(.secondary)
                     Text("Extrayendo JSON, consultando ChromaDB y redactando borrador.")
                         .font(.caption)
-                        .foregroundColor(.tertiaryLabel)
+                        .foregroundColor(.secondary)
                     Spacer()
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -120,7 +120,7 @@ struct PipelineView: View {
                     Spacer()
                     Image(systemName: "arrow.down.doc")
                         .font(.system(size: 60))
-                        .foregroundColor(.quaternaryLabel)
+                        .foregroundColor(.secondary)
                     Text("Ningún caso activo")
                         .font(.headline)
                         .foregroundColor(.secondary)
